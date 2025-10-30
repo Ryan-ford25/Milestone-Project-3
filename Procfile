@@ -1,0 +1,1 @@
+web: gunicorn badge_manager.wsgi
