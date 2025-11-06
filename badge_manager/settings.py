@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'badges',
+    'question_and_answers',
 ]
 
 MIDDLEWARE = [
