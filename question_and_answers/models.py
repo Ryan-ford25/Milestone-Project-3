@@ -14,3 +14,9 @@ class Question(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
 
 
+class Answer(models.model):
+    answer = models.ForeignKey(Question, on_delete=models.CASCADE, related_name='reply')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="replier")
+    body = models.TextField()
+    approved = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
