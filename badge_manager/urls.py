@@ -16,9 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from badges.views import badges
 
 urlpatterns = [
-    path('', badges, name='badges'),
+    path("", include("question_and_answers.urls"), name="qna-urls"),
     path('admin/', admin.site.urls),
 ]
