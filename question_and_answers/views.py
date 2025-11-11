@@ -4,4 +4,5 @@ from .models import Question
 # Create your views here.
 
 class QuestionList(generic.ListView):
-    model = Question
+    queryset = Question.objects.all()
+    template_name = "question_list.html"

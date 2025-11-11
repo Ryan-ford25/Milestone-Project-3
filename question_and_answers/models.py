@@ -12,6 +12,7 @@ class Question(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices = STATUS, default=0)
     updated_on = models.DateTimeField(auto_now=True)
+    excerpt = models.TextField(blank=True)
 
     class Meta:
         ordering = ["-created_on"]
